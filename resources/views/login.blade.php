@@ -30,7 +30,7 @@
             <div class="clearfix">
                 <div class="hidden-xs" style="margin-top:200px"></div>
                 <div class="col-sm-12 col-md-10 col-md-offset-2">
-                    <?php $admin_logo_img = Voyager::setting('logo', ''); ?>
+                    <?php $admin_logo_img = Voyager::setting('admin_icon_image', ''); ?>
                     @if($admin_logo_img == '')
                     <img class="img-responsive pull-left logo hidden-xs" src="{{ config('voyager.assets_path') }}/images/logo-icon-light.png" alt="Logo Icon">
                     @else
