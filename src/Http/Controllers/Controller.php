@@ -157,6 +157,11 @@ abstract class Controller extends BaseController
             /********** FILE TYPE **********/
             case 'file':
                 if ($files = $request->file($row->field)) {
+                    
+                    if (!is_array($files)) {
+                        $files = [$files];
+                    }
+                    
                     $filesPath = [];
                     foreach ($files as $key => $file) {
                         $filename = Str::random(20);
